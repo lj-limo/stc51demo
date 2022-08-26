@@ -1,0 +1,16 @@
+# parameter
+| Voltage | 3.3 / 5V |
+|--|--|
+| Communication Interface | one-wire |
+| Temperature measurement range | -20 ~ +60℃ |
+| Temperature measurement error | ±2℃ |
+| Humidity measurement range | 20% ~ 95%RH（0 – 50℃） |
+| Interface model | PH2.0-3P |
+
+# Pin description
+
+| pin name | pin function |
+|--|--|
+| G | power negative, ground |
+| V | Power is positive,3.3 / 5V |
+| D | Single bus data communication port |
