@@ -8,14 +8,14 @@
 
 # Introduction
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-The LED module adopts the form of pull-up resistor, the signal pin S input is low-level lighted, and high-level is extinguished.
+Through the proposed switch circuit designed by switches, resistors and led lights, the power light is on after power-on, after the switch is pressed, another light is on, and the signal pin S outputs a high level at the same time
 
 # parameter
 | Voltage | 3.3 / 5V |
 |--|--|
-| LED lamp diameter | 5mm |
+| Switch model | 12 * 12mm |
 | positioning hole | M3 |
-| Module weight | 6.75g |
+| Module weight | 9.05g |
 | Interface model | PH2.0-3P |
 
 # Pin description
@@ -24,7 +24,7 @@ The LED module adopts the form of pull-up resistor, the signal pin S input is lo
 |--|--|
 | G | power negative, ground |
 | V | Power is positive, 5V |
-| s | Signal input control pin |
+| s | Signal output pin |
 
 
 # Instructions for use
@@ -38,12 +38,12 @@ Before programming the code, you can directly insert the `PH2.0` cable into the 
 | S | 2 |
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-After connecting the line and downloading the program, you can see that the module flashes and turns off.
+After connecting the line and downloading the program, press the switch, you can see the light will come on.
 
 ```cpp
 
 /*
-  LED flashing program control
+  Key switch reading program
   Author: YXDZ
   Creation Date: 2022/8/25
   Version: V1.0
@@ -54,15 +54,14 @@ int a=2;        //Signal pin definition, you can change the pin here
  
 void setup() {
   // put your setup code here, to run once:
-pinMode(a,OUTPUT);
+pinMode(a,INPUT);
+Serial.begin(9600);  
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-digitalWrite(a,LOW);
-delay(1000);
-digitalWrite(a,HIGH);
-delay(1000);
+ Serial.println(digitalRead(a)); 
+ delay(500);
 }
 
 
