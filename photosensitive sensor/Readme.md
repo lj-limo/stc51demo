@@ -39,7 +39,8 @@ Before programming the code, you can directly insert the `PH2.0` cable into the 
 |--|--|
 | G | GND |
 | V | 5V |
-| S | 2 |
+| D | 2 |
+| A | A0 |
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 After downloading the program, adjust the potentiometer, you can see that the digital D port outputs a low level when the indicator light is on
