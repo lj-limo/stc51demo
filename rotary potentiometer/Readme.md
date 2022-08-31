@@ -35,7 +35,7 @@ Before programming the code, you can directly insert the `PH2.0` cable into the 
 |--|--|
 | G | GND |
 | V | 5V |
-| S | 2 |
+| S | A0 |
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 After connecting the line and downloading the program, you can open the serial monitor to see the read analog quantity (0-1023)
